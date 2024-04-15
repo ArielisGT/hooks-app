@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Message } from "./Message";
+import { Message } from "../components/Message";
 
 export const SimpleForm = () => {
     
