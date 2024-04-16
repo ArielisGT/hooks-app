@@ -8,7 +8,9 @@ import ReactDOM from 'react-dom/client'
 // import { FormWithCustomHook } from './02-useEffect/FormWithCustomHook.jsx'
 // import { MultipleCustomHooks } from './03-examples/MultipleCustomHooks.jsx'
 // import { FocusScreen } from './04-useRef/FocusScreen.jsx'
-import { PlayVideo } from './04-useRef/PlayVideo'
+// import { PlayVideo } from './04-useRef/PlayVideo'
+import { PlayVideoWithRef } from './04-useRef/PlayVideoWithRef'
+
 
 import './index.css'
 
@@ -20,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <FormWithCustomHook /> */}
     {/* <MultipleCustomHooks /> */}
     {/* <FocusScreen /> */}
-    <PlayVideo />
+    {/* <PlayVideo /> */}
+    <PlayVideoWithRef />
   </React.StrictMode>,
 )

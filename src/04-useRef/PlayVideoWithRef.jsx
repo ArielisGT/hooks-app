@@ -1,7 +1,8 @@
 
 import { useState, useRef } from 'react';
+import { VideoAsset } from '../components/VideoAsset';
 
-export const PlayVideo = () => {
+export const PlayVideoWithRef = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const ref = useRef(null);
 
@@ -25,16 +26,11 @@ export const PlayVideo = () => {
         >
           {isPlaying ? 'Pause' : 'Play'}
         </button>
-        <video
-          ref={ref}
-          onPlay={() => setIsPlaying(true)}
-          onPause={() => setIsPlaying(false)}
-        >
-        <source
-        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
-        type="video/mp4"
+        <VideoAsset
+            ref={ref}
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
         />
-        </video>
       </div>
     </>
   );
