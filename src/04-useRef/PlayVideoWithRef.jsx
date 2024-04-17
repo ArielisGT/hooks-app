@@ -19,18 +19,18 @@ export const PlayVideoWithRef = () => {
 
   return (
     <>
-      <div className="container-fluid">
+      <div className="container d-flex flex-column">
+        <VideoAsset
+            ref={ref}
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
+        />
         <button
           className='btn btn-info'
           onClick={handleClick}
         >
           {isPlaying ? 'Pause' : 'Play'}
         </button>
-        <VideoAsset
-            ref={ref}
-            onPlay={() => setIsPlaying(true)}
-            onPause={() => setIsPlaying(false)}
-        />
       </div>
     </>
   );

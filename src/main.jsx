@@ -9,7 +9,8 @@ import ReactDOM from 'react-dom/client'
 // import { MultipleCustomHooks } from './03-examples/MultipleCustomHooks.jsx'
 // import { FocusScreen } from './04-useRef/FocusScreen.jsx'
 // import { PlayVideo } from './04-useRef/PlayVideo'
-import { PlayVideoWithRef } from './04-useRef/PlayVideoWithRef'
+// import { PlayVideoWithRef } from './04-useRef/PlayVideoWithRef'
+import { Memorize } from './06-memos/Memorize'
 
 
 import './index.css'
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <MultipleCustomHooks /> */}
     {/* <FocusScreen /> */}
     {/* <PlayVideo /> */}
-    <PlayVideoWithRef />
+    {/* <PlayVideoWithRef /> */}
+    <Memorize />
   </React.StrictMode>,
 )
