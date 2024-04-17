@@ -5,7 +5,7 @@ import { Child } from "./Child";
 export const Memorize = () => {
 
     const { counter, increment } = useCounter(0);
-    const {show, setShow } = useState(true);
+    const [show, setShow ] = useState(true);
 
   return (
     <>

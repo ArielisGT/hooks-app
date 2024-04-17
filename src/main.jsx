@@ -10,8 +10,8 @@ import ReactDOM from 'react-dom/client'
 // import { FocusScreen } from './04-useRef/FocusScreen.jsx'
 // import { PlayVideo } from './04-useRef/PlayVideo'
 // import { PlayVideoWithRef } from './04-useRef/PlayVideoWithRef'
-import { Memorize } from './06-memos/Memorize'
-
+// import { Memorize } from './06-memo_function/Memorize'
+import { MemoHook } from './07-useMemo/MemoHook'
 
 import './index.css'
 
@@ -25,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <FocusScreen /> */}
     {/* <PlayVideo /> */}
     {/* <PlayVideoWithRef /> */}
-    <Memorize />
+    {/* <Memorize /> */}
+    <MemoHook />
   </React.StrictMode>,
 )
