@@ -11,7 +11,8 @@ import ReactDOM from 'react-dom/client'
 // import { PlayVideo } from './04-useRef/PlayVideo'
 // import { PlayVideoWithRef } from './04-useRef/PlayVideoWithRef'
 // import { Memorize } from './06-memo_function/Memorize'
-import { MemoHook } from './07-useMemo/MemoHook'
+// import { MemoHook } from './07-useMemo/MemoHook'
+import { CallbackHook } from './08-useCallback/CallbackHook'
 
 import './index.css'
 
@@ -26,6 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <PlayVideo /> */}
     {/* <PlayVideoWithRef /> */}
     {/* <Memorize /> */}
-    <MemoHook />
+    {/* <MemoHook /> */}
+    <CallbackHook />
   </React.StrictMode>,
 )
