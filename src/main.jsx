@@ -13,7 +13,10 @@ import ReactDOM from 'react-dom/client'
 // import { Memorize } from './06-memo_function/Memorize'
 // import { MemoHook } from './07-useMemo/MemoHook'
 // import { CallbackHook } from './08-useCallback/CallbackHook'
-import { Padre } from './09-tarea-memo/Padre'
+// import { Padre } from './09-tarea-memo/Padre'
+import { TodoApp } from './09-useReducer/TodoApp'
+
+// import './09-useReducer/intro-reducer'
 
 import './index.css'
 
@@ -30,6 +33,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <Memorize /> */}
     {/* <MemoHook /> */}
     {/* <CallbackHook /> */}
-    <Padre />
+    {/* <Padre /> */}
+    <TodoApp />
   </React.StrictMode>,
 )
