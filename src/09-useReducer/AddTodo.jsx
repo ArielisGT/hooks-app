@@ -5,7 +5,7 @@ export const AddTodo = ({ onNewTodo }) => {
     const { description,
             onInputChange,
             onResetForm,
-} = useForm({
+          } = useForm({
         description: '',
 
     });
