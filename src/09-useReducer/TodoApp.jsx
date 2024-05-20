@@ -1,63 +1,12 @@
-import { useEffect, useReducer } from "react"
-import { todoReducer } from "./todoReducer";
 import { TodoList } from "./TodoList";
-import { AddTodo } from "./AddTodo"
+import { AddTodo } from "./AddTodo";
+import { useTodos } from "../hooks/useTodos";
 
-const initialState = [
-    // {
-    //     id: new Date().getTime(),
-    //     description: 'Recolectar la piedra del alma',
-    //     done: false,
-    // },
-];
 
-// Para persistir los TODOs usando localStorage, se cargan inicialmente en la función initialLoad que carga la data inicial en el reducer:
-const initialLoad = () => {
-    return JSON.parse(localStorage.getItem('todos')) || [];
-    //  console.log(todos);
-};
 
 export const TodoApp = () => {
     
- // const [state, dispatch] = useReducer( reducer, initialArg,  init? )
- // const [todos, dispatch] = useReducer( todoReducer, initialState );
-    const [todos, dispatch] = useReducer( todoReducer, initialState, initialLoad );
-
-
-// para persistir la data que vamos creando en el componente AddTodo usamos localStorage:
-    useEffect(() => {
-        localStorage.setItem('todos', JSON.stringify( todos ) || []);
-        // console.log(todos);
-    }, [todos]);
-    
-
-    const handleNewTodo = ( todo ) => {
-        const action = {
-            type: '[TODO] Add Todo',
-            payload: todo,
-        }
-        dispatch( action );
-    };
-
-    const handleDeleteTodo = ( id ) => {
-        const action = {
-            type: '[TODO] Remove Todo',
-            payload: id,
-        }
-        dispatch( action );
-        //  console.log(id);
-
-    };
-
-    const handleToggleTodo = ( id ) => {
-        const action = {
-            type: '[TODO] Toggle Todo',
-            payload: id,
-        }
-        dispatch( action );
-        //  console.log(action.payload);
-
-    };
+    const { todos, handleNewTodo, handleDeleteTodo, handleToggleTodo } = useTodos();
 
   return (
     <>
