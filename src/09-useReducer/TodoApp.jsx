@@ -1,28 +1,35 @@
-import { useReducer } from "react"
+import { useEffect, useReducer } from "react"
 import { todoReducer } from "./todoReducer";
 import { TodoList } from "./TodoList";
 import { AddTodo } from "./AddTodo"
 
 const initialState = [
-    {
-        id: new Date().getTime(),
-        description: 'Recolectar la piedra del alma',
-        done: false,
-
-    },
-    {
-        id: new Date().getTime() * 3,
-        description: 'Recolectar la piedra del tiempo',
-        done: false,
-
-    },
-
+    // {
+    //     id: new Date().getTime(),
+    //     description: 'Recolectar la piedra del alma',
+    //     done: false,
+    // },
 ];
 
-export const TodoApp = () => {
+// Para persistir los TODOs usando localStorage, se cargan inicialmente en la función initialLoad que carga la data inicial en el reducer:
+const initialLoad = () => {
+    return JSON.parse(localStorage.getItem('todos')) || [];
+    //  console.log(todos);
+};
 
+export const TodoApp = () => {
+    
  // const [state, dispatch] = useReducer( reducer, initialArg,  init? )
-    const [todos, dispatch] = useReducer( todoReducer, initialState );
+ // const [todos, dispatch] = useReducer( todoReducer, initialState );
+    const [todos, dispatch] = useReducer( todoReducer, initialState, initialLoad );
+
+
+// para persistir la data que vamos creando en el componente AddTodo usamos localStorage:
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify( todos ) || []);
+        // console.log(todos);
+    }, [todos]);
+    
 
     const handleNewTodo = ( todo ) => {
         const action = {
