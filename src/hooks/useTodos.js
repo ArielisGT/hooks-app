@@ -47,7 +47,6 @@ export const useTodos = () => {
     };
 
     return {
-        initialState,
         todos,
         handleNewTodo,
         handleDeleteTodo,
