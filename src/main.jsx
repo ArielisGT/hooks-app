@@ -1,5 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from "react-router-dom";
+
 
 //import App from './App.jsx'
 //import { CounterApp } from './01-useState/CounterApp.jsx'
@@ -22,20 +24,22 @@ import {  MainApp } from './10-useContext/MainApp'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    {/* <CounterApp /> */}
-    {/* <CounterWithCustomHook /> */}
-    {/* <SimpleForm /> */}
-    {/* <FormWithCustomHook /> */}
-    {/* <MultipleCustomHooks /> */}
-    {/* <FocusScreen /> */}
-    {/* <PlayVideo /> */}
-    {/* <PlayVideoWithRef /> */}
-    {/* <Memorize /> */}
-    {/* <MemoHook /> */}
-    {/* <CallbackHook /> */}
-    {/* <Padre /> */}
-    {/* <TodoApp /> */}
-    <MainApp />
-  </React.StrictMode>,
+  <BrowserRouter>
+    {/* <React.StrictMode> */}
+      {/* <CounterApp /> */}
+      {/* <CounterWithCustomHook /> */}
+      {/* <SimpleForm /> */}
+      {/* <FormWithCustomHook /> */}
+      {/* <MultipleCustomHooks /> */}
+      {/* <FocusScreen /> */}
+      {/* <PlayVideo /> */}
+      {/* <PlayVideoWithRef /> */}
+      {/* <Memorize /> */}
+      {/* <MemoHook /> */}
+      {/* <CallbackHook /> */}
+      {/* <Padre /> */}
+      {/* <TodoApp /> */}
+      <MainApp />
+    {/* </React.StrictMode>, */}
+  </BrowserRouter>
 )
